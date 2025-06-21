@@ -1,5 +1,0 @@
-1. open the anaconda prompt 
-2. activate fake
-3. cd  C:\Users\ELCOT\Desktop\deep
-4. python app.py
-5. copy url from prompt and paste to browser
