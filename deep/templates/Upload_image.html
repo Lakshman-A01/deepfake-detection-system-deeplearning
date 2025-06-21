@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Upload Image</title>
+    <meta charset="utf-8">
+    <link href="{{url_for('static',filename='css/main.css')}}" rel = "stylesheet">
+    <link href="{{url_for('static',filename='css/normalize.css')}}" rel = "stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/5b5f01cade.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+  <div class="banner1" style="background-image: url('static/images/image1.jpg')">
+    <nav>
+      <div class="nav-links">
+        <ul>
+          <li><a href="{{ url_for('main') }}">HOME</a></li>
+          <li><a href="{{ url_for('image') }}">IMAGE</a></li>
+          <li><a href="{{ url_for('Video') }}">VIDEO</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+      <div class="hoba">
+
+      <div class="file__upload">
+        <div class="header">
+            <p><i class="fa-solid fa-cloud-arrow-up"></i><span><span>Up</span>load</span></p>
+        </div>
+
+        <form class="body" method="post" action="/Predict_image" enctype="multipart/form-data">
+          			<p class="file-upload-wrapper" data-text="Select your file!">
+                  <input class="file-upload-field" id="upload" type="file" name="file" autocomplete="off" required  accept=".png, .jpg, .jpeg" ></p>
+                <label for="upload">
+                  	<i class="fa fa-file-text-o fa-3x"></i>
+                    <!-- <p>
+                        <strong>Drag and drop  </strong>files here<br>or<span> browse</span>  to begin the upload
+                    </p> -->
+                </label>
+                <br>
+                <div id="vv" >  </div>
+            <p class="btn">
+        		    <input class="submt" type="submit" value="Predict">
+
+
+        	  </p>
+        </form>
+
+    </div>
+    </div>
+  </div>
+
+
+    <script src="{{url_for('static',filename='js/jquery-1.12.4.min.js')}}"></script>
+   <script src="{{url_for('static',filename='js/main.js')}}"></script> !
+
+
+  </body>
+</html>

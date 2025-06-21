@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Host</title>
+<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap"rel="stylesheet">
+</head>
+<body>    
+<section class="header" style="background-image: url('static/images/image2.jpg')">
+<nav>
+<div class="nav-links">
+<ul>
+    <li><a href="{{ url_for('main') }}">HOME</a></li>
+    <li><a href="{{ url_for('login') }}">LOGIN</a></li>
+   
+</ul>
+</div>
+</nav>
+<center>
+<form action="{{ url_for('registration') }}" method="POST">
+    <div class="wrapper">
+    <h1 style="color:blueviolet;font-size: 35px;text-shadow: 2px 2px 2px black"> REGISTER HERE</h1>
+<label style="color: black;font-size: 24px; text-shadow: 0px 0px 2px white">FULL NAME</label><br>
+<input type="text" name="name" id="name" placeholder="Ex:sam S"autocomplete="off"><br><br>
+<label style="color: black;font-size: 24px; text-shadow: 0px 0px 2px white">EMAIL</label><br>
+<input type="email" name="email" id="email" placeholder="Ex:xxxyy@gmail.com"autocomplete="off"><br><br>
+<label style="color: black;font-size: 24px; text-shadow: 0px 0px 2px white">PASSWORD</label><br>
+<input type="password" name="password" id="password" placeholder="******"autocomplete="off"><br><br>
+<button class="button" style="color: white;font-size: 20px ;text-shadow: 2px 2px 2px black;">Submit</button>
+</form>
+</div>
+</center>
+</div>
+</section>
+</body>
+</html>

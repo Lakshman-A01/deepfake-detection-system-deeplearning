@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>upload video</title>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="C:\Users\pc\Desktop\local Api\static\css\main.css">
+    <link rel="stylesheet" href="C:\Users\pc\Desktop\local Api\static\css\normalize.css"> -->
+    <link href="{{url_for('static',filename='css/main.css')}}" rel = "stylesheet">
+    <link href="{{url_for('static',filename='css/normalize.css')}}" rel = "stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/5b5f01cade.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  <div class="banner1" style="background-image: url('static/images/image1.jpg')">
+    <nav>
+      <div class="nav-links">
+        <ul>
+          <li><a href="{{ url_for('main') }}">HOME</a></li>
+          <li><a href="{{ url_for('image') }}">IMAGE</a></li>
+          <li><a href="">VIDEO</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+      <div class="hoba">
+
+      <div class="file__upload">
+       
+        <form class="body" method="post" action="/predict_video" enctype="multipart/form-data"  id="xx"  >
+          
+            
+          			<p class="file-upload-wrapper" data-text="Select your file!">
+                  <input class="file-upload-field" id="upload" type="file" name="file" autocomplete="off"  onchange="vvupload()" requiredaccept=".mp4"></p>
+                <label for="upload">
+                  	<i class="fa fa-file-text-o fa-3x"></i>
+                    <!-- <p>
+                        <strong>hhh  </strong>files here<br>or<span> browse</span>  to begin the upload
+                    </p> -->
+                </label>
+                <br>
+                
+                <video   id = "uploadvideo" controls = "controls"></video>
+                
+            <p class="btn">
+        		    <input class="submt" type="submit" value="Predict">
+        	 </p>
+        </form>
+    </div>
+    </div>
+  </div>
+ 
+
+  </body>
+</html>

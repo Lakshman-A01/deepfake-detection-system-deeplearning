@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Host</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    </head>
+    
+    <body>
+    <section class="header" style="background-image: url('static/images/image2.jpg')">
+        <nav>
+            <div class="nav-links">
+            <ul>
+                <li><a href="{{ url_for('main') }}">HOME</a></li>
+                <li><a href="{{ url_for('registration') }}">REGISTRATION</a></li>
+                
+            </ul>
+            </div>
+            </nav>
+        <br>
+        <br>
+            <center>
+                <h2 style="color: rgb(235, 252, 0);font-size: 25px ;text-shadow: 5px 5px 5px black;">Welcome</h2>
+                <br>
+                <h1 style="color: blueviolet;font-size: 35px; text-shadow: 0px 4px 2px black"> LOGIN </h1>
+                <br>
+            <div class="reg">
+                <form id="reg" action="login" method="POST">
+                    
+                    <label style="color:black;font-size: 24px; text-shadow: 0px 0px 2px white">EMAIL</label><br>
+                    <input type="email" name="email" id="email" placeholder="&#9993 email" autocomplete="off"><br><br>
+                    <label style="color:black;font-size: 24px;text-shadow: 0px 0px 2px white">PASSWORD</label><br>
+                    <input type="password" name="password" id="password" placeholder="*******"autocomplete="off"><br><br>
+                    <button style="color: white;font-size: 25px ;text-shadow: 2px 2px 2px black;">Login</button>
+            </form>
+            </div>
+        </center>
+    </section>
+    </body>
+</html>

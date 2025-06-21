@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Fake</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /* Style for the container */
+        .containers {
+            width: 1000px;
+            height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            display: flex;
+        }
+
+        /* Style for each image */
+        .containers img {
+            width: 160px;
+            height: 160px;
+            margin: 5px; /* Optional margin between images */
+        }
+
+        .containers2 {
+            width: 1000px;
+            height: 130px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            display: flex;
+        }
+
+        /* Style for each image */
+        .containers2 img {
+            width: 100px;
+            height: 100px;
+            margin: 5px; /* Optional margin between images */
+        }
+        *{
+            color:aliceblue;
+        }
+    </style>
+</head>
+<body style="background-image:url('static/bg.jpg'); background-repeat: no-repeat; background-size: cover;">
+    
+    <div>
+        <h1 style="padding: 1%;">Home</h1>
+        </div>
+
+    <div class="text-center"  style="margin-top: 2%;">
+        <h1>Extract Frame From video</h1>
+        </div>
+    <div class="containers" style="margin-left: 12%;">
+       
+        {% for frame_image in frame_images %}
+            <img src="{{ url_for('static', filename='face folder/' + frame_image) }}" alt="Frame Image {{ loop.index }}">
+        {% endfor %}
+        
+    </div>
+    <div class="text-center">
+        <h1>Extract Face </h1>
+        </div>
+
+    <div class="containers2" style="margin-left: 12%;">
+        {% for face_image in face_images %}
+            <img src="{{ url_for('static', filename='frame/' + face_image) }}" alt="Face Image {{ loop.index }}">
+        {% endfor %}
+    </div>
+    {% if prediction %}
+    <div class="text-center">
+        <h1 style="color: red;">Prediction: <span>{{prediction}}</span></h1>
+        </div>
+        {% endif %}
+
+    
+</body>
+</html>
